@@ -17,10 +17,14 @@ class DataHandler {
         
         URLSession.shared.dataTask(with: url) { (data, res, err) in
             // check res & err properly here (placeholder)
-            if let error = err { print(error.localizedDescription); return }
-            guard let httpResponse = res as? HTTPURLResponse,
-                (200...299).contains(httpResponse.statusCode) else { return }
-
+            if let error = err {
+                print(error.localizedDescription)
+                return
+            }
+            guard let httpResponse = res as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+                closure(nil, false)
+                return
+            }
             // decode data
             guard let data = data else { return }
             do {
@@ -28,7 +32,6 @@ class DataHandler {
                 closure(pokemon, true)
             } catch let jsonErr {
                 print("Error serializing json:", jsonErr)
-                closure(nil, false)
             }
         }.resume()
     }
