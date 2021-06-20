@@ -11,7 +11,7 @@ A UIKit app that displays Pokemon from the PokeAPI (https://pokeapi.co/)
 
 ## App Screenshots
 
-<img src="imgs/ss1.png" width="50%" height="50%">| <img src="imgs/ss2.png" width="50%" height="50%"> 
+<img src="imgs/ss1.png" width="45%" height="45%">| <img src="imgs/ss2.png" width="45%" height="45%"> 
 
 ### Support 
 - Built using Xcode 12.4
