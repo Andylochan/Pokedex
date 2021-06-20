@@ -54,13 +54,13 @@ class ViewController: UIViewController {
         }
     }
     
-    private func convertToPounds(grams: Int) -> Int {
+    func convertToPounds(grams: Int) -> Int {
         let newMass = (Double(grams) * 100) / 454
         let roundedMass = Int(round(newMass))
         return roundedMass
     }
     
-    private func convertToFeet(cm: Int) -> String {
+    func convertToFeet(cm: Int) -> String {
         let newHeight = (Double(cm) * 10) / 30
         let roundedHeight = String(format: "%.1f", newHeight).replacingOccurrences(of: ".", with: "'")
         return roundedHeight
