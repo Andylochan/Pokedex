@@ -42,6 +42,10 @@ class ViewController: UIViewController {
         let weightInGrams = pokemon.weight ?? 0
         let weightInPounds = convertToPounds(grams: weightInGrams)
         weightLbl.text = "Weight: " + String(weightInPounds) + " lbs"
+        // Create image and update imageView
+        if let data = try? Data(contentsOf: pokemon.sprites.frontDefault) {
+            imgView.image = UIImage(data: data)
+        }
     }
     
     func convertToPounds(grams: Int) -> Int {

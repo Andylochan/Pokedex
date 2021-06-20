@@ -7,8 +7,17 @@
 
 import Foundation
 
-struct Pokemon: Codable {
+struct Pokemon: Decodable {
     let id: Int
     let name: String
     let weight: Int?
+    let sprites: Sprites
+}
+
+struct Sprites: Decodable {
+    let frontDefault: URL
+    
+    enum CodingKeys: String, CodingKey {
+        case frontDefault = "front_default"
+    }
 }
