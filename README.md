@@ -8,6 +8,7 @@ A UIKit app that displays Pokemon from the PokeAPI (https://pokeapi.co/)
 - Follows MVC design pattern.
 - Custom app icon made in Sketch. 
 - No 3rd Party Dependencies
+- Unit Tests
 
 ## App Screenshots
 
