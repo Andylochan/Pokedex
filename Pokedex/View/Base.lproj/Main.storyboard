@@ -52,30 +52,33 @@
                                 <rect key="frame" x="20" y="133" width="374" height="374"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CD2-tI-ZSX">
-                                        <rect key="frame" x="67" y="0.0" width="240" height="124.5"/>
+                                        <rect key="frame" x="20" y="0.0" width="334" height="93.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7K-Ab-chK">
-                                                <rect key="frame" x="0.0" y="0.0" width="120" height="124.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7K-Ab-chK">
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="93.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Emj-gT-3dO">
-                                                <rect key="frame" x="120" y="1" width="120" height="122"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="120" id="WHO-p6-a3r"/>
-                                                </constraints>
+                                                <rect key="frame" x="167" y="1" width="167" height="91"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bub-zw-omo">
-                                        <rect key="frame" x="164.5" y="124.5" width="45" height="125"/>
+                                        <rect key="frame" x="164.5" y="93.5" width="45" height="93.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZh-5Y-4Rh">
-                                        <rect key="frame" x="160.5" y="249.5" width="53.5" height="124.5"/>
+                                        <rect key="frame" x="160.5" y="187" width="53.5" height="93.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Raz-OC-mcn">
+                                        <rect key="frame" x="162" y="280.5" width="50.5" height="93.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -83,6 +86,8 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CD2-tI-ZSX" secondAttribute="trailing" constant="20" id="GsX-Gb-bMz"/>
+                                    <constraint firstItem="CD2-tI-ZSX" firstAttribute="leading" secondItem="m6K-5P-aAX" secondAttribute="leading" constant="20" id="h9n-Fl-Xp1"/>
                                     <constraint firstAttribute="height" constant="374" id="tEY-pG-XWI"/>
                                 </constraints>
                             </stackView>
@@ -104,6 +109,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="heightLbl" destination="Raz-OC-mcn" id="Ym6-8I-oYd"/>
                         <outlet property="idLbl" destination="i7K-Ab-chK" id="fAA-ED-iYt"/>
                         <outlet property="imgView" destination="Emj-gT-3dO" id="w8x-9W-odZ"/>
                         <outlet property="nameLbl" destination="Bub-zw-omo" id="Rvn-gz-1VD"/>
